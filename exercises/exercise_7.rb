@@ -11,10 +11,12 @@ puts "----------"
 
 # Your code goes here ...
 puts "Please enter store name"
-@name = gets.chomp
+name = gets.chomp
+
 @s = Store.new
-@s.name = @name
+@s.name = "#{name}"
+@s.annual_revenue = 421000
 @s.womens_apparel = true
-@s.mens_apparel = true
+@s.mens_apparel = false
 @s.save
 @s.errors.full_messages
